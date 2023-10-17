@@ -43,6 +43,18 @@ public class Facture implements Serializable {
     @OneToMany(mappedBy="facture")
     @JsonIgnore
     private Set<Reglement> reglements;
-
+	@Override
+	public String toString() {
+		return "Facture{" +
+				"idFacture=" + idFacture +
+				", montantRemise=" + montantRemise +
+				", montantFacture=" + montantFacture +
+				", dateCreationFacture=" + dateCreationFacture +
+				", dateDerniereModificationFacture=" + dateDerniereModificationFacture +
+				", archivee=" + archivee +
+				", fournisseur=" + fournisseur +
+				// Ajoutez d'autres propriétés que vous souhaitez inclure dans la représentation
+				'}';
+	}
 	
 }
